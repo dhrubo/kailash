@@ -1,11 +1,65 @@
 ---
 layout: layouts/base.njk
 title: Gallery
+description: Photo galleries from Kailash at Beadon Street, Shivananda Snehanir, and Vivekananda Snehanir.
 permalink: /gallery/
+locations:
+  - id: beadon
+    label: "Kailash at Beadon Street"
+    suffix: "-2"
+    numbers: [1, 2, 3, 4, 5, 6, 7]
+  - id: shivananda
+    label: "Shivananda Snehanir"
+    suffix: "-1"
+    numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+  - id: vivekananda
+    label: "Vivekananda Snehanir"
+    suffix: ""
+    numbers: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71]
 ---
 <section class="page-intro">
   <div class="wrap">
     <h1>Gallery</h1>
-    <p>PLACEHOLDER: content for Gallery to be filled in from scraped-content/gallery.md</p>
+    <img class="page-intro__banner" src="https://kailash-shivanandam.com/wp-content/uploads/2026/08/Gallery-banner.webp" alt="Gallery Banner" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tabs tabs--main" data-tabs>
+      <div role="tablist" aria-label="Gallery locations" class="tablist tablist--main">
+        {% for loc in locations %}
+        <button role="tab" id="tab-loc-{{ loc.id }}" aria-controls="panel-loc-{{ loc.id }}" aria-selected="{{ 'true' if loop.first else 'false' }}" tabindex="{{ '0' if loop.first else '-1' }}" class="tab-btn tab-btn--main">{{ loc.label }}</button>
+        {% endfor %}
+      </div>
+
+      {% for loc in locations %}
+      <div role="tabpanel" id="panel-loc-{{ loc.id }}" aria-labelledby="tab-loc-{{ loc.id }}" class="tabpanel">
+        <div class="tabs tabs--sub" data-tabs>
+          <div role="tablist" aria-label="{{ loc.label }} media type" class="tablist tablist--sub">
+            <button role="tab" id="tab-{{ loc.id }}-photo" aria-controls="panel-{{ loc.id }}-photo" aria-selected="true" tabindex="0" class="tab-btn">Photo <span class="tab-count">({{ loc.numbers.length }})</span></button>
+            <button role="tab" id="tab-{{ loc.id }}-video" aria-controls="panel-{{ loc.id }}-video" aria-selected="false" tabindex="-1" class="tab-btn">Video</button>
+          </div>
+
+          <div role="tabpanel" id="panel-{{ loc.id }}-photo" aria-labelledby="tab-{{ loc.id }}-photo" class="tabpanel">
+            <div class="gallery-grid">
+              {% for n in loc.numbers %}
+              <a href="https://kailash-shivanandam.com/wp-content/uploads/2026/08/{{ n }}{{ loc.suffix }}.webp" target="_blank" rel="noopener">
+                <img src="https://kailash-shivanandam.com/wp-content/uploads/2026/08/{{ n }}{{ loc.suffix }}.webp" alt="{{ loc.label }} gallery photo {{ n }}" loading="lazy">
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+
+          <div role="tabpanel" id="panel-{{ loc.id }}-video" aria-labelledby="tab-{{ loc.id }}-video" class="tabpanel">
+            <div class="gallery-placeholder">
+              <h3>Videos Coming Soon</h3>
+              <p>We are preparing amazing video content for you. Stay tuned!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
 </section>
