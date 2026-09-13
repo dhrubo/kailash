@@ -3,10 +3,15 @@ layout: layouts/base.njk
 title: Activities
 description: Social activities, educational support and annual festivals run by Kailash at Beadon Street, Vivekananda Snehanir and Shivananda Snehanir.
 permalink: /activities/
+banner:
+  image: /assets/images/Activities.webp
+  alt: Activities of Kailash — homeopathy clinic, festival, and yoga class
 ---
+{% include "partials/page-banner.njk" %}
 <section class="page-intro">
   <div class="wrap">
-    <h1>Our Activities</h1>
+    <img class="page-intro__band" src="{{ '/assets/images/band-2.webp' | url }}" alt="" width="122" height="20">
+    <h1 class="page-title"><span class="page-title__script">Our</span> <span class="page-title__bold">Activities</span></h1>
   </div>
 </section>
 

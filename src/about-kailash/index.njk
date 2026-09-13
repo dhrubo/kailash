@@ -3,10 +3,15 @@ layout: layouts/base.njk
 title: About Kailash
 description: How Swami Shivananda Giri Maharaj founded Kailash in memory of his disciple Kailash Ghosh, and the centres it runs today — Ananda Ashram, Vivekananda Snehanir and Shivananda Snehanir.
 permalink: /about-kailash/
+banner:
+  image: /assets/images/about-bnr-new.webp
+  alt: Photos from Kailash's work — sankirtan, the shrine at Beadon Street, Kailash Ghosh, Maa Bhavatarini, and devotees gathered together
 ---
+{% include "partials/page-banner.njk" %}
 <section class="page-intro">
   <div class="wrap">
-    <h1>About Kailash</h1>
+    <img class="page-intro__band" src="{{ '/assets/images/band-2.webp' | url }}" alt="" width="122" height="20">
+    <h1 class="page-title"><span class="page-title__script">About</span> <span class="page-title__bold">Kailash</span></h1>
     <p>The Guru founded a social service institution in the name of his disciple, which is a unique and unparalleled event that remains ever glorious.</p>
   </div>
 </section>

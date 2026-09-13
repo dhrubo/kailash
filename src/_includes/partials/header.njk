@@ -1,19 +1,43 @@
 <header class="site-header">
-  <div class="wrap site-header__inner">
-    <a class="site-header__brand" href="{{ '/' | url }}">{{ site.name }}</a>
+  <div class="wrap site-header__top">
+    <a class="site-header__brand" href="{{ '/' | url }}">
+      <img class="site-header__logo" src="{{ '/assets/images/logo.webp' | url }}" alt="{{ site.name }} logo" width="70" height="82">
+      <span class="site-header__brand-text">
+        <span class="site-header__title">{{ site.name }}</span>
+        <span class="site-header__subtitle">A Philanthropic Organization</span>
+      </span>
+    </a>
+
+    <div class="site-header__badge">
+      <img src="{{ '/assets/images/glorious.webp' | url }}" alt="" width="110" height="70">
+      <span class="site-header__badge-text">
+        <span class="site-header__badge-top">Glorious</span>
+        <span class="site-header__badge-years">48</span>
+        <span class="site-header__badge-bottom">Years</span>
+      </span>
+    </div>
+
+    <div class="site-header__founder">
+      <span class="site-header__founder-text">Founded by<br><strong>Swami Shivananda Giri Maharaj</strong></span>
+      <img class="site-header__founder-photo" src="{{ '/assets/images/maharaj.webp' | url }}" alt="Swami Shivananda Giri Maharaj" width="64" height="78">
+    </div>
+
     <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
       <span class="sr-only">Menu</span>
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
       <span class="nav-toggle__bar"></span>
     </button>
-    <nav id="primary-nav" class="site-nav">
+  </div>
+
+  <nav id="primary-nav" class="site-nav">
+    <div class="wrap site-nav__inner">
       <ul>
         {% for item in site.nav %}
         <li><a href="{{ item.href | url }}" {% if page.url == item.href %}aria-current="page"{% endif %}>{{ item.label }}</a></li>
         {% endfor %}
-        <li><a class="btn btn--nav" href="{{ site.cta.href | url }}">{{ site.cta.label }}</a></li>
       </ul>
-    </nav>
-  </div>
+      <a class="btn btn--donate" href="{{ site.cta.href | url }}">{{ site.cta.label }}</a>
+    </div>
+  </nav>
 </header>

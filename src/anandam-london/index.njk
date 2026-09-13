@@ -3,10 +3,15 @@ layout: layouts/base.njk
 title: Anandam (London)
 description: The history of Anandam (London), a socio-cultural and religious organisation founded in 1975 following Maharaj's first visit to the UK, and the monthly Kirtans and annual Kali Puja it continues to this day.
 permalink: /anandam-london/
+banner:
+  image: /assets/images/anandam-bnr-1.webp
+  alt: Anandam London's Kali Puja shrine and gathering of devotees
 ---
+{% include "partials/page-banner.njk" %}
 <section class="page-intro">
   <div class="wrap">
-    <h1>Anandam (London)</h1>
+    <img class="page-intro__band" src="{{ '/assets/images/band-2.webp' | url }}" alt="" width="122" height="20">
+    <h1 class="page-title"><span class="page-title__script">Anandam</span> <span class="page-title__bold">(London)</span></h1>
     <p>A Socio-Cultural / Religious Organisation</p>
   </div>
 </section>

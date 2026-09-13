@@ -3,10 +3,15 @@ layout: layouts/base.njk
 title: Donation
 description: Donate to Kailash and save tax under section 80G. Bank transfer details, PAN requirements, and ways to support our work.
 permalink: /donation/
+banner:
+  image: /assets/images/donation.webp
+  alt: Kailash's donation and outreach activities
 ---
+{% include "partials/page-banner.njk" %}
 <section class="page-intro">
   <div class="wrap">
-    <h1>Donate &amp; Save Tax</h1>
+    <img class="page-intro__band" src="{{ '/assets/images/band-2.webp' | url }}" alt="" width="122" height="20">
+    <h1 class="page-title"><span class="page-title__script">Donate</span> <span class="page-title__bold">&amp; Save Tax</span></h1>
     <p>Please send your information regarding your donation to us by email at <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a> to receive a Money Receipt and 80G Exemption Certificate.</p>
     <p>A Certificate under Section 10BE of the IT Act will be issued for donations of &#8377;1,000 and above, against PAN/Aadhaar. The 80G certificate under section 10BE will be sent to you once received from the Income Tax Department, Government of India.</p>
     <p><strong>Please note:</strong> PAN details are mandatory for donations amounting to &#8377;10,000 or more in a financial year.</p>

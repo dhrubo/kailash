@@ -10,15 +10,41 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const hero = document.getElementById("hero");
   if (hero) {
-    const slides = hero.querySelectorAll(".hero__slide");
-    if (slides.length > 1) {
-      let current = 0;
-      setInterval(() => {
-        slides[current].classList.remove("is-active");
-        current = (current + 1) % slides.length;
-        slides[current].classList.add("is-active");
-      }, 5000);
+    const texts = Array.from(hero.querySelectorAll(".hero__slide-text"));
+    const portraits = Array.from(hero.querySelectorAll(".hero__portrait"));
+    const prevBtn = hero.querySelector(".hero__arrow--prev");
+    const nextBtn = hero.querySelector(".hero__arrow--next");
+    let current = 0;
+    let timer = null;
+
+    function goTo(index) {
+      const total = texts.length;
+      current = (index + total) % total;
+      texts.forEach((el, i) => el.classList.toggle("is-active", i === current));
+      portraits.forEach((el, i) => el.classList.toggle("is-active", i === current));
     }
+
+    function restartAutoplay() {
+      if (timer) clearInterval(timer);
+      if (texts.length > 1) {
+        timer = setInterval(() => goTo(current + 1), 5000);
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        goTo(current - 1);
+        restartAutoplay();
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        goTo(current + 1);
+        restartAutoplay();
+      });
+    }
+
+    restartAutoplay();
   }
 
   // Accessible tabs (gallery locations + photo/video sub-tabs).

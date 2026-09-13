@@ -3,3 +3,5 @@ _site/
 .DS_Store
 .cache/
 test-evidence/
+scripts/scrape/downloaded/
+scripts/scrape/screenshots/

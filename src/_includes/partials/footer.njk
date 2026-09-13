@@ -1,20 +1,25 @@
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
     <div class="site-footer__grid">
-      <div>
-        <p class="site-footer__brand">{{ site.name }}</p>
-        <p>{{ site.tagline }}</p>
+      <div class="site-footer__about">
+        <a class="site-footer__brand" href="{{ '/' | url }}">
+          <img src="{{ '/assets/images/logo.webp' | url }}" alt="" width="48" height="56">
+          <span>{{ site.name }}</span>
+        </a>
+        <p class="site-footer__founder">Founded by<br><strong>Swami Shivananda Giri Maharaj</strong></p>
         <p>{{ site.missionBlurb }}</p>
         <a class="btn" href="{{ site.cta.href | url }}">{{ site.cta.label }}</a>
       </div>
 
       <div>
         <h2>Contact Us</h2>
-        <p>{{ site.contact.registeredOffice }}</p>
-        <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
-        {% for phone in site.contact.phones %}
-        <p><a href="tel:{{ phone.tel }}">{{ phone.display }}</a></p>
-        {% endfor %}
+        <ul class="site-footer__contact">
+          <li><img src="{{ '/assets/images/location.webp' | url }}" alt="" width="18" height="18"><span>{{ site.contact.registeredOffice }}</span></li>
+          <li><img src="{{ '/assets/images/mail.webp' | url }}" alt="" width="18" height="18"><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+          {% for phone in site.contact.phones %}
+          <li><img src="{{ '/assets/images/call.webp' | url }}" alt="" width="18" height="18"><a href="tel:{{ phone.tel }}">{{ phone.display }}</a></li>
+          {% endfor %}
+        </ul>
       </div>
 
       <div>
@@ -30,10 +35,18 @@
       </div>
 
       <div>
-        <h2>Follow Us</h2>
+        <h2>Follow Us on</h2>
         <ul class="site-footer__social">
           {% for s in site.social %}
-          <li><a href="{{ s.href }}" rel="noopener" target="_blank">{{ s.label }}</a></li>
+          <li>
+            <a href="{{ s.href }}" rel="noopener" target="_blank" aria-label="{{ s.label }}">
+              {% if s.label == "Facebook" %}
+              <img src="{{ '/assets/images/facebook.svg' | url }}" alt="" width="16" height="16">
+              {% elif s.label == "YouTube" %}
+              <img src="{{ '/assets/images/yt.svg' | url }}" alt="" width="16" height="16">
+              {% endif %}
+            </a>
+          </li>
           {% endfor %}
         </ul>
       </div>

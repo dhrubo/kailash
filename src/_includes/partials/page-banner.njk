@@ -1,0 +1,6 @@
+{# Full-bleed banner strip shown directly under the nav on every inner page.
+   Usage: {% include "partials/page-banner.njk" %} with `banner` set in the page's front matter,
+   e.g. banner: { image: "/assets/images/about-bnr-new.webp", alt: "..." } #}
+<div class="page-banner">
+  <img src="{{ banner.image | url }}" alt="{{ banner.alt }}" width="1920" height="420" loading="eager">
+</div>

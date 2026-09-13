@@ -3,10 +3,15 @@ layout: layouts/base.njk
 title: Publications
 description: Panch Sike Panch Ana, Kailash's monthly magazine, along with booklets on the life and teachings of Swami Shivananda Giri Maharaj.
 permalink: /publications/
+banner:
+  image: /assets/images/Publication.webp
+  alt: Publications by Kailash and Swami Shivananda Giri Maharaj
 ---
+{% include "partials/page-banner.njk" %}
 <section class="page-intro">
   <div class="wrap">
-    <h1>Publications</h1>
+    <img class="page-intro__band" src="{{ '/assets/images/band-2.webp' | url }}" alt="" width="122" height="20">
+    <h1 class="page-title"><span class="page-title__bold">Publications</span></h1>
   </div>
 </section>
 

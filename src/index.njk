@@ -4,35 +4,32 @@ title: Home
 description: Kailash is a Kolkata-based philanthropic organization founded in 1978, offering free education, healthcare, and cultural programs guided by spiritual values.
 permalink: /
 ---
-<section class="hero" id="hero">
-  <div class="hero__slide is-active" style="background-image:url('{{ '/assets/images/bnr-right.webp' | url }}')">
-    <div class="wrap">
-      <h1>A Home Where Hope Becomes Opportunity.</h1>
-      <p>Creating opportunities for learning, confidence, and a better tomorrow.</p>
+{% set slides = [
+  { headline: "A Home Where Hope Becomes Opportunity", subhead: "Creating opportunities for learning, confidence, and a better tomorrow.", image: "bnr-right.webp" },
+  { headline: "In the Touch of His Lotus Feet", subhead: "All Sorrows Fade Away", image: "Home-Banner-2.webp" },
+  { headline: "Beyond Words and Worldly Expressions", subhead: "There is a quiet spiritual splendour, an inner bliss flowing effortlessly.", image: "Banner.webp" },
+  { headline: "Where the Soul Smiles", subhead: "When the heart rests in the Divine, joy needs no reason and the soul needs no words.", image: "Banner-1.webp" },
+  { headline: "A Radiant Presence of Divine Grace", subhead: "The serene gaze of a realised soul, reflecting inner stillness and unwavering devotion.", image: "Home-Banner-1-1.webp" }
+] %}
+<section class="hero" id="hero" style="background-image:url('{{ '/assets/images/banner-bg.webp' | url }}')">
+  <div class="wrap hero__inner">
+    <div class="hero__text">
+      {% for slide in slides %}
+      <div class="hero__slide-text{% if loop.first %} is-active{% endif %}">
+        <h1>{{ slide.headline }}</h1>
+        <img class="hero__divider" src="{{ '/assets/images/band.webp' | url }}" alt="" width="184" height="15">
+        <p class="hero__subhead">{{ slide.subhead }}</p>
+      </div>
+      {% endfor %}
+      <div class="hero__arrows">
+        <button type="button" class="hero__arrow hero__arrow--prev" aria-label="Previous slide"><img src="{{ '/assets/images/arrow-left.webp' | url }}" alt="" width="20" height="19"></button>
+        <button type="button" class="hero__arrow hero__arrow--next" aria-label="Next slide"><img src="{{ '/assets/images/arrow-right.webp' | url }}" alt="" width="20" height="19"></button>
+      </div>
     </div>
-  </div>
-  <div class="hero__slide" style="background-image:url('{{ '/assets/images/Home-Banner-2.webp' | url }}')">
-    <div class="wrap">
-      <h1>In the Touch of His Lotus Feet</h1>
-      <p>All Sorrows Fade Away</p>
-    </div>
-  </div>
-  <div class="hero__slide" style="background-image:url('{{ '/assets/images/Banner.webp' | url }}')">
-    <div class="wrap">
-      <h1>Beyond words and worldly expressions, there is a quiet spiritual splendour</h1>
-      <p>an inner bliss flowing effortlessly</p>
-    </div>
-  </div>
-  <div class="hero__slide" style="background-image:url('{{ '/assets/images/Banner-1.webp' | url }}')">
-    <div class="wrap">
-      <h1>Where the Soul Smiles</h1>
-      <p>when the heart rests in the Divine, joy needs no reason and the soul needs no words</p>
-    </div>
-  </div>
-  <div class="hero__slide" style="background-image:url('{{ '/assets/images/Home-Banner-1-1.webp' | url }}')">
-    <div class="wrap">
-      <h1>A Radiant Presence of Divine Grace</h1>
-      <p>the serene gaze of a realised soul, reflecting the depth of spiritual wisdom, inner stillness, and unwavering devotion to the Divine</p>
+    <div class="hero__media">
+      {% for slide in slides %}
+      <img class="hero__portrait{% if loop.first %} is-active{% endif %}" src="{{ ('/assets/images/' + slide.image) | url }}" alt="Swami Shivananda Giri Maharaj" loading="{{ 'eager' if loop.first else 'lazy' }}">
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -46,7 +43,7 @@ permalink: /
       <p>The Guru founded a social service institution in the name of his disciple, which is a unique and unparalleled event that remains ever glorious.</p>
       <p>On the 30th April, 1978, after the conclusion of the first Nikhil Banga Bhakti Geeti Sammelan, Maharaj invited all the artists and devotees on that day at the temple of Maa Bhavatarini, Dakshineswar. The purpose was to partake the sacred Prasad together.</p>
       <blockquote>अन्तः शाक्ता बहिः शैवा सभायां वैष्णवा मताः। नाना-वेष-धराः कौला विचरन्ति महीतले।।</blockquote>
-      <a class="btn" href="/about-kailash/">Read More</a>
+      <a class="btn" href="{{ '/about-kailash/' | url }}">Read More</a>
     </div>
   </div>
 </section>
@@ -56,7 +53,7 @@ permalink: /
     <h2>Swami Shivananda Giri Maharaj <span class="section__years">(1936 - 1987)</span></h2>
     <p>In the year 1936, 23rd April, Swami Shivananda Giri Maharaj was born on the morning of Thursday. This divine manifestation occurred at Ananda Ashram, located at 21/2 Beadon Street. His birth took place on the sacred lunar day of Akshaya Tritiya.</p>
     <blockquote>&ldquo;Inwardly they are Shaktas; outwardly they appear as Shaivas; in public assemblies they profess themselves to be Vaishnavas. Assuming various outward forms, the Kaulas move about the earth.&rdquo;</blockquote>
-    <a class="btn" href="/about-maharaja/">Know More About Maharaj</a>
+    <a class="btn" href="{{ '/about-maharaja/' | url }}">Know More About Maharaj</a>
   </div>
 </section>
 
@@ -70,7 +67,7 @@ permalink: /
       <figure><img src="{{ '/assets/images/HOMEOPATHY-CLINIC-FLIPKART-DELIVERY-BOY.webp' | url }}" alt="Homeopathy Clinic" loading="lazy"><figcaption>Homeopathy Clinic</figcaption></figure>
       <figure><img src="{{ '/assets/images/EYE-CLINIC.webp' | url }}" alt="Eye Clinic" loading="lazy"><figcaption>Eye Clinic</figcaption></figure>
     </div>
-    <a class="btn" href="/activities/">See All Activities</a>
+    <a class="btn" href="{{ '/activities/' | url }}">See All Activities</a>
   </div>
 </section>
 
@@ -82,19 +79,19 @@ permalink: /
         <img src="{{ '/assets/images/15thAug-Home.webp' | url }}" alt="15th August" loading="lazy">
         <h3>Celebrating Independence Day at Vivekananda Snehanir</h3>
         <p>Vivekananda Snehanir celebrated India&rsquo;s 80th Independence Day.</p>
-        <a href="/news-and-update/#15th-august">Read More</a>
+        <a href="{{ '/news-and-update/' | url }}#15th-august">Read More</a>
       </article>
       <article class="news-card">
         <img src="{{ '/assets/images/London.webp' | url }}" alt="Anandam (London)" loading="lazy">
         <h3>Anandam London</h3>
         <p>The Smaran Tithi Kirtan of Thakur Biswanath Dev will be held on Sunday, 13th September 2026.</p>
-        <a href="/news-and-update/#anandam-london">Read More</a>
+        <a href="{{ '/news-and-update/' | url }}#anandam-london">Read More</a>
       </article>
       <article class="news-card">
         <img src="{{ '/assets/images/ParbatiDas-home.webp' | url }}" alt="Ananda Sandhya" loading="lazy">
         <h3>Ananda Sandhya</h3>
         <p>Kailash organised a cultural evening titled &ldquo;Ananda Sandhya&rdquo; at the Rabindra Sadan auditorium, Kolkata.</p>
-        <a href="/news-and-update/#ananda-sandhya">Read More</a>
+        <a href="{{ '/news-and-update/' | url }}#ananda-sandhya">Read More</a>
       </article>
     </div>
   </div>
@@ -130,20 +127,23 @@ permalink: /
         <a class="btn" href="https://kailash-shivanandam.com/wp-content/uploads/2026/08/Maharaj-at-ISKCON-Studio.pdf">Read</a>
       </div>
     </div>
-    <a class="btn" href="/publications/">All Publications</a>
+    <a class="btn" href="{{ '/publications/' | url }}">All Publications</a>
   </div>
 </section>
 
-<section class="section section--alt">
-  <div class="wrap">
-    <h2>Our Gallery</h2>
-    <div class="gallery-strip">
-      <img src="{{ '/assets/images/Annual-Festival-Ceremonies-2.webp' | url }}" alt="A joyful day of togetherness for the boys" loading="lazy">
-      <img src="{{ '/assets/images/Annual-Festival-Ceremonies-1.webp' | url }}" alt="A Proud Milestone for Vivekananda Snehanir" loading="lazy">
-      <img src="{{ '/assets/images/Sree-Gurupurnima-1.webp' | url }}" alt="Sree Guru Purnima" loading="lazy">
-      <img src="{{ '/assets/images/WhatsApp-Image-2026-06-08-at-14.03.52.webp' | url }}" alt="Free Educational Support" loading="lazy">
-      <img src="{{ '/assets/images/Free-Homeopathy-Clinic-at-SS-scaled.webp' | url }}" alt="Free Homeopathy Clinic" loading="lazy">
+<section class="section section--alt gallery-preview">
+  <div class="wrap gallery-preview__inner">
+    <div class="gallery-preview__col">
+      <h2>Our Gallery</h2>
+      <div class="gallery-strip">
+        <img src="{{ '/assets/images/Annual-Festival-Ceremonies-2.webp' | url }}" alt="A joyful day of togetherness for the boys" loading="lazy">
+        <img src="{{ '/assets/images/Annual-Festival-Ceremonies-1.webp' | url }}" alt="A Proud Milestone for Vivekananda Snehanir" loading="lazy">
+        <img src="{{ '/assets/images/Sree-Gurupurnima-1.webp' | url }}" alt="Sree Guru Purnima" loading="lazy">
+        <img src="{{ '/assets/images/WhatsApp-Image-2026-06-08-at-14.03.52.webp' | url }}" alt="Free Educational Support" loading="lazy">
+        <img src="{{ '/assets/images/Free-Homeopathy-Clinic-at-SS-scaled.webp' | url }}" alt="Free Homeopathy Clinic" loading="lazy">
+      </div>
+      <a class="btn" href="{{ '/gallery/' | url }}">View All</a>
     </div>
-    <a class="btn" href="/gallery/">View All</a>
+    <img class="gallery-preview__portrait" src="{{ '/assets/images/maharaj.webp' | url }}" alt="Swami Shivananda Giri Maharaj" loading="lazy">
   </div>
 </section>
