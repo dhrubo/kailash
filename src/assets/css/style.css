@@ -398,3 +398,184 @@ a { color: var(--color-accent); }
     grid-template-columns: 1fr;
   }
 }
+
+/* Page content (interior pages) */
+.page-content {
+  padding-bottom: 3rem;
+}
+
+.page-content section + section {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.page-content figure {
+  margin: 1.25rem 0;
+}
+
+.page-content figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  display: block;
+}
+
+/* Card grid (publications, booklets, activity photos) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card figure {
+  margin: 0;
+}
+
+.card figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.card .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Activity photo grid */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.activity-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.activity-card__body {
+  padding: 0.85rem 1rem 1.1rem;
+}
+
+.activity-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.activity-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--color-muted);
+}
+
+/* Contact page */
+.contact-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact-card dt {
+  font-weight: 600;
+  color: var(--color-heading);
+  margin-top: 0.75rem;
+}
+
+.contact-card dd {
+  margin: 0;
+}
+
+.contact-form-static {
+  display: grid;
+  gap: 1rem;
+  max-width: 480px;
+}
+
+.contact-form-static label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.contact-form-static input,
+.contact-form-static textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: #fff;
+  font-family: var(--font-body);
+  color: var(--color-muted);
+}
+
+.contact-form-static [disabled] {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+/* Donation page */
+.data-table {
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  width: 100%;
+  max-width: 480px;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.data-table th {
+  background: var(--color-bg);
+  width: 40%;
+}
+
+.data-table__note {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.plain-list {
+  padding-left: 1.25rem;
+}
+
+.plain-list li {
+  margin-bottom: 0.4rem;
+}
