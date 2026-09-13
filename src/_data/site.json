@@ -33,8 +33,8 @@
   ],
   "missionBlurb": "Since 1978, we've been transforming lives through care and education. Help us continue this journey.",
   "formEndpoints": {
-    "note": "TODO: replace both IDs below with real Formspree form IDs (or swap the action URLs for another free form backend). Create a free form at https://formspree.io, verify the recipient email, then paste the endpoint URL it gives you (looks like https://formspree.io/f/xxxxxxxx) in place of each REPLACE_ME below. Until then these forms will not deliver anywhere.",
-    "contact": "https://formspree.io/f/REPLACE_ME_CONTACT",
-    "donation": "https://formspree.io/f/REPLACE_ME_DONATION"
+    "note": "Using Formspree's direct-email endpoint (https://formspree.io/<email>) so submissions go straight to dhrubo@gmail.com for now, no Formspree account/dashboard ID needed. IMPORTANT: the first time each form is submitted, Formspree emails dhrubo@gmail.com a one-time confirmation link that must be clicked before that form starts delivering entries. After that it works for every future submission on the free tier (50/month, shared across all forms using this pattern). To send to a different address later, or to get a dashboard (spam filtering, autoresponders, more submissions), swap this for a real https://formspree.io/f/xxxxxxxx form ID from a Formspree account.",
+    "contact": "https://formspree.io/dhrubo@gmail.com",
+    "donation": "https://formspree.io/dhrubo@gmail.com"
   }
 }
