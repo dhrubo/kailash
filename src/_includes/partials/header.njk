@@ -12,6 +12,7 @@
         {% for item in site.nav %}
         <li><a href="{{ item.href | url }}" {% if page.url == item.href %}aria-current="page"{% endif %}>{{ item.label }}</a></li>
         {% endfor %}
+        <li><a class="btn btn--nav" href="{{ site.cta.href | url }}">{{ site.cta.label }}</a></li>
       </ul>
     </nav>
   </div>

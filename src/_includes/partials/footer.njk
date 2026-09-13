@@ -1,12 +1,49 @@
 <footer class="site-footer">
   <div class="wrap site-footer__inner">
-    <p>&copy; {{ currentYear }} {{ site.name }}. All rights reserved.</p>
-    <nav aria-label="Footer">
-      <ul>
-        {% for item in site.nav %}
-        <li><a href="{{ item.href | url }}">{{ item.label }}</a></li>
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__brand">{{ site.name }}</p>
+        <p>{{ site.tagline }}</p>
+        <p>{{ site.missionBlurb }}</p>
+        <a class="btn" href="{{ site.cta.href | url }}">{{ site.cta.label }}</a>
+      </div>
+
+      <div>
+        <h2>Contact Us</h2>
+        <p>{{ site.contact.registeredOffice }}</p>
+        <p><a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+        {% for phone in site.contact.phones %}
+        <p><a href="tel:{{ phone.tel }}">{{ phone.display }}</a></p>
         {% endfor %}
-      </ul>
-    </nav>
+      </div>
+
+      <div>
+        <h2>Quick Links</h2>
+        <nav aria-label="Footer">
+          <ul>
+            {% for item in site.nav %}
+            <li><a href="{{ item.href | url }}">{{ item.label }}</a></li>
+            {% endfor %}
+            <li><a href="{{ site.footerQuickLinksExtra.href | url }}">{{ site.footerQuickLinksExtra.label }}</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div>
+        <h2>Follow Us</h2>
+        <ul class="site-footer__social">
+          {% for s in site.social %}
+          <li><a href="{{ s.href }}" rel="noopener" target="_blank">{{ s.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__legal">
+      <p>Regn No: {{ site.contact.regNo }}</p>
+      <p>CSR Registration number: {{ site.contact.csrRegNo }}</p>
+      <p>{{ site.contact.taxNote }}</p>
+      <p>&copy; {{ currentYear }} {{ site.name }}</p>
+    </div>
   </div>
 </footer>

@@ -1,15 +1,35 @@
 {
-  "name": "Kailash Shivanandam",
-  "tagline": "PLACEHOLDER - replace with confirmed tagline once content pass completes",
+  "name": "Kailash",
+  "tagline": "A Philanthropic Organization founded by Swami Shivananda Giri Maharaj",
   "url": "https://kailash-shivanandam.com",
   "nav": [
     { "label": "Home", "href": "/" },
-    { "label": "Anandam London", "href": "/anandam-london/" },
-    { "label": "About Kailash", "href": "/about-kailash/" },
-    { "label": "About Maharaja", "href": "/about-maharaja/" },
+    { "label": "About Us", "href": "/about-kailash/" },
+    { "label": "Maharaj", "href": "/about-maharaja/" },
+    { "label": "Anandam (London)", "href": "/anandam-london/" },
     { "label": "Publications", "href": "/publications/" },
     { "label": "Activities", "href": "/activities/" },
     { "label": "Gallery", "href": "/gallery/" },
-    { "label": "Contact Us", "href": "/contact-us/" }
-  ]
+    { "label": "Contact", "href": "/contact-us/" }
+  ],
+  "cta": { "label": "Donate Now", "href": "/donation/" },
+  "footerQuickLinksExtra": { "label": "News And Update", "href": "/news-and-update/" },
+  "contact": {
+    "registeredOffice": "21/2 Beadon Street, Kolkata – 700 006, West Bengal, India",
+    "email": "kailashssgm@gmail.com",
+    "phones": [
+      { "display": "90075 27687", "tel": "9007527687" },
+      { "display": "84201 90532", "tel": "8420190532" }
+    ],
+    "phoneNoteForDev": "TODO confirm with client: Contact page shows a third form '+91 9007527678' next to Sri Arpan Banerjee/Secretary, which conflicts in its last two digits with the footer/nav number 90075 27687. Using the footer/nav version site-wide until confirmed.",
+    "secretary": "Sri Arpan Banerjee, Secretary",
+    "regNo": "SO/022788 of 1978-79 under W.B. Society Registration Act XXVI of 1961",
+    "csrRegNo": "CSR00103130",
+    "taxNote": "Donations are exempted from Income Tax u/s 80G (5)(vi) of the I.T. Act 1961"
+  },
+  "social": [
+    { "label": "Facebook", "href": "https://www.facebook.com/kailash.anandam" },
+    { "label": "YouTube", "href": "https://www.youtube.com/@shivanandam6393" }
+  ],
+  "missionBlurb": "Since 1978, we've been transforming lives through care and education. Help us continue this journey."
 }
