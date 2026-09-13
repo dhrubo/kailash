@@ -5,3 +5,4 @@ _site/
 test-evidence/
 scripts/scrape/downloaded/
 scripts/scrape/screenshots/
+scripts/scrape/rebuild-check/

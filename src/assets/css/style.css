@@ -259,13 +259,17 @@ a { color: var(--color-accent); }
   .site-nav__inner {
     flex-wrap: wrap;
   }
-  .site-nav ul {
+  .site-nav ul,
+  .site-nav .btn--donate {
     display: none;
     width: 100%;
+  }
+  .site-nav ul {
     flex-direction: column;
     gap: 0;
   }
-  .site-nav.is-open ul {
+  .site-nav.is-open ul,
+  .site-nav.is-open .btn--donate {
     display: flex;
   }
   .site-nav li {
@@ -274,6 +278,11 @@ a { color: var(--color-accent); }
   .site-nav a {
     display: block;
     padding: 0.75rem 0;
+  }
+  .site-nav .btn--donate {
+    justify-content: center;
+    margin: 0.75rem 0;
+    clip-path: none;
   }
   .site-header__top {
     flex-wrap: wrap;
