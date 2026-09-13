@@ -588,6 +588,7 @@ a { color: var(--color-accent); }
 }
 
 .contact-form-static input,
+.contact-form-static select,
 .contact-form-static textarea {
   width: 100%;
   padding: 0.6rem 0.75rem;
@@ -595,12 +596,18 @@ a { color: var(--color-accent); }
   border-radius: 4px;
   background: #fff;
   font-family: var(--font-body);
-  color: var(--color-muted);
+  color: var(--color-text);
 }
 
 .contact-form-static [disabled] {
   cursor: not-allowed;
   opacity: 0.75;
+}
+
+.contact-form-static__note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin: 0;
 }
 
 /* Donation page */

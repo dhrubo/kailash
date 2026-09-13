@@ -31,5 +31,10 @@
     { "label": "Facebook", "href": "https://www.facebook.com/kailash.anandam" },
     { "label": "YouTube", "href": "https://www.youtube.com/@shivanandam6393" }
   ],
-  "missionBlurb": "Since 1978, we've been transforming lives through care and education. Help us continue this journey."
+  "missionBlurb": "Since 1978, we've been transforming lives through care and education. Help us continue this journey.",
+  "formEndpoints": {
+    "note": "TODO: replace both IDs below with real Formspree form IDs (or swap the action URLs for another free form backend). Create a free form at https://formspree.io, verify the recipient email, then paste the endpoint URL it gives you (looks like https://formspree.io/f/xxxxxxxx) in place of each REPLACE_ME below. Until then these forms will not deliver anywhere.",
+    "contact": "https://formspree.io/f/REPLACE_ME_CONTACT",
+    "donation": "https://formspree.io/f/REPLACE_ME_DONATION"
+  }
 }
