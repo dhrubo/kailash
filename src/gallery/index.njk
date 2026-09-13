@@ -20,7 +20,7 @@ locations:
 <section class="page-intro">
   <div class="wrap">
     <h1>Gallery</h1>
-    <img class="page-intro__banner" src="https://kailash-shivanandam.com/wp-content/uploads/2026/08/Gallery-banner.webp" alt="Gallery Banner" loading="lazy">
+    <img class="page-intro__banner" src="{{ '/assets/images/Gallery-banner.webp' | url }}" alt="Gallery Banner" loading="lazy">
   </div>
 </section>
 
@@ -44,8 +44,8 @@ locations:
           <div role="tabpanel" id="panel-{{ loc.id }}-photo" aria-labelledby="tab-{{ loc.id }}-photo" class="tabpanel">
             <div class="gallery-grid">
               {% for n in loc.numbers %}
-              <a href="https://kailash-shivanandam.com/wp-content/uploads/2026/08/{{ n }}{{ loc.suffix }}.webp" target="_blank" rel="noopener">
-                <img src="https://kailash-shivanandam.com/wp-content/uploads/2026/08/{{ n }}{{ loc.suffix }}.webp" alt="{{ loc.label }} gallery photo {{ n }}" loading="lazy">
+              <a href="{{ ('/assets/images/gallery/' + loc.id + '/' + n + '.webp') | url }}" target="_blank" rel="noopener">
+                <img src="{{ ('/assets/images/gallery/' + loc.id + '/' + n + '.webp') | url }}" alt="{{ loc.label }} gallery photo {{ n }}" loading="lazy">
               </a>
               {% endfor %}
             </div>
