@@ -1,0 +1,16 @@
+{
+  "name": "anandam",
+  "version": "1.0.0",
+  "description": "Static rebuild of kailash-shivanandam.com built with Eleventy, deployed to GitHub Pages.",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Kailash Shivanandam",
+  "tagline": "PLACEHOLDER - replace with confirmed tagline once content pass completes",
+  "url": "https://kailash-shivanandam.com",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Anandam London", "href": "/anandam-london/" },
+    { "label": "About Kailash", "href": "/about-kailash/" },
+    { "label": "About Maharaja", "href": "/about-maharaja/" },
+    { "label": "Publications", "href": "/publications/" },
+    { "label": "Activities", "href": "/activities/" },
+    { "label": "Gallery", "href": "/gallery/" },
+    { "label": "Contact Us", "href": "/contact-us/" }
+  ]
+}
