@@ -249,15 +249,15 @@ a { color: var(--color-accent); }
     clip-path: none;
   }
   .site-header__top {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
-  .site-header__founder-text {
+  .site-header__badge,
+  .site-header__founder {
     display: none;
   }
 }
 
 @media (max-width: 600px) {
-  .site-header__badge { transform: scale(0.72); margin: -0.5rem -0.75rem; }
   .site-header__title { font-size: 1.5rem; }
 }
 
