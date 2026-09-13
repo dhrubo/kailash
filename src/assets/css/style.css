@@ -84,7 +84,7 @@ a { color: var(--color-accent); }
   justify-content: space-between;
   gap: 1.25rem;
   padding: 1rem 1.25rem;
-  background: linear-gradient(120deg, var(--header-olive-dark), var(--header-olive-light));
+  background: linear-gradient(180deg, var(--header-olive-light), var(--header-olive-dark));
   color: #fff;
 }
 
@@ -97,9 +97,10 @@ a { color: var(--color-accent); }
 }
 
 .site-header__logo {
-  width: 62px;
+  width: 56px;
   height: auto;
   flex-shrink: 0;
+  mix-blend-mode: multiply;
 }
 
 .site-header__brand-text {
@@ -122,51 +123,14 @@ a { color: var(--color-accent); }
 }
 
 .site-header__badge {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   flex-shrink: 0;
-  width: 96px;
-  transform-origin: center;
+  width: 100px;
 }
 
 .site-header__badge img {
   display: block;
-  width: 96px;
+  width: 100%;
   height: auto;
-}
-
-.site-header__badge-text {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  pointer-events: none;
-}
-
-.site-header__badge-top {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  color: #F3E7B8;
-  margin-top: 0.1rem;
-}
-
-.site-header__badge-years {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  line-height: 1;
-  color: #F7D65C;
-}
-
-.site-header__badge-bottom {
-  font-size: 0.55rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #F3E7B8;
 }
 
 .site-header__founder {
@@ -188,8 +152,8 @@ a { color: var(--color-accent); }
   object-fit: cover;
   object-position: top center;
   border-radius: 50%;
-  border: 3px solid #F3E7B8;
-  background: #EDE9CE;
+  border: 2px solid rgba(243, 231, 184, 0.6);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15);
 }
 
 .nav-toggle {
